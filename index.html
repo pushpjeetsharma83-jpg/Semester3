@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #c13131;
+        }
+
+        input[type="text"], input[type="number"] {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #4cbc50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }    
+
+</style>
+<script>
+    function addStudent() {
+        const name = document.getElementById('studentName').value;
+        const roleNo = document.getElementById('ROLE NO').value;
+        const genderElements = document.getElementsByName('gender');
+        let gender = '';
+        
+        for (const element of genderElements) {
+            if (element.checked) {
+                gender = element.value;
+                break;
+            }
+        }
+    }
+</script>
+
+</head>
+<body>
+    <h1>Student Management System</h1>
+    <h2>Welcome to DS department</h2>
+    
+    <div>
+       Enter student name: <input type="text" id="studentName" placeholder="Enter student name"> <br> <br>
+        Role No: <input type="number" id="ROLE NO" placeholder="Role No"> <br> <br>
+        Gender: <input type="radio" id="studentClass" placeholder="gender" name="gender" value="male"> Male
+        <input type="radio" id="studentClass" placeholder="gender" name="gender" value="female"> Female <br> <br>
+        <button onclick="addStudent()">Add Student</button>
+    </div> 
+    <br><br>
+      <h2>Student List</h2>
+    <ul id="studentList">
+    </ul>
+     <table border="1" id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role No</th>
+                <th>Gender</th>
+            </tr>   
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+   
+         <display id="errorMessage" style="color: red;"></display>
+
+       
+</body>
+</html>
