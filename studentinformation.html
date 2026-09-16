@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+     <h1>Student Information</h1>
+    <script>
+        function multiply(a,b)
+   
+    let name = prompt("Enter your name: ");
+    let rollno = prompt("Enter your roll number: ");
+    let s1=Number(prompt("Enter subject 1 marks: "));
+    let s2=Number(prompt("Enter subject 2 marks: "));
+    let s3=Number(prompt("Enter subject 3 marks: "));
+    let s4=Number(prompt("Enter subject 4 marks: "));
+    function result(s1,s2,s3,s4)
+    let total=s1+s2+s3+s4;
+    let percentage=(total/400)*100;
+     
+    if(percentage>=90)
+    {
+       
+        document.write("Grade: A+");
+    }
+    else if(percentage>=80)
+    {
+     
+        document.write("Grade: A");
+    }
+    else if(percentage>=70)
+    {
+        
+        document.write("Grade: B");
+    }
+    else if(percentage>=60)
+    {
+       
+        document.write("Grade: C");
+    }
+    else
+    {
+       
+        document.write("Grade: F");
+    }
+
+  
+    </script>
+</body>
+</html>
